@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    background-color: darkcyan;
+    color: aliceblue;
+    padding: 30px 50px;
+}
+section{
+    padding: 30px 50px;
+}
+h1{
+    margin: 0;
+    text-align: center;
+}
+.top{
+    height: 300px;
+    /* background-image: linear-gradient(to top,lightblue, darkcyan); */
+    background-image: radial-gradient(circle,lightblue, darkcyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item{
+    background-color: darkcyan;
+    height: 70px;
+    width: calc(25% - 15px);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media print{
+    header, .item{
+        color: #000;
+        background-color: #fff;
+    }
+    header{
+        border-bottom: 1px solid;
+    }
+    .item{
+        outline: 1px solid;
+    }
+    .top{
+        background-image: none;
+    }
+}
+/*
+braille - устройство Брайля
+*/
+@media screen and (min-width: 700px) and (max-width: 992px){
+    .top{
+        background-image: radial-gradient(circle,yellow, darkcyan, yellow);
+    }
+}
