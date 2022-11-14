@@ -7,7 +7,7 @@ a{
     color: inherit;
 }
 header{
-    background-color: darkcyan;
+    background-color: violet;
     color: aliceblue;
     padding: 30px 50px;
 }
@@ -20,20 +20,22 @@ h1{
 }
 .top{
     height: 300px;
+    color: #fff;
     /* background-image: linear-gradient(to top,lightblue, darkcyan); */
-    background-image: radial-gradient(circle,lightblue, darkcyan);
+    background-image: linear-gradient(violet,lightblue);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .bottom{
+    background-color: lightblue;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .item{
-    background-color: darkcyan;
+    background-color: violet;
     height: 70px;
     width: calc(25% - 15px);
     color: white;
@@ -45,7 +47,7 @@ h1{
 
 @media print{
     header, .item{
-        color: #000;
+        color: white;
         background-color: #fff;
     }
     header{
@@ -62,7 +64,10 @@ h1{
 braille - устройство Брайля
 */
 @media screen and (min-width: 700px) and (max-width: 992px){
+    .bottom{
+        background-color: yellow;
+    }
     .top{
-        background-image: radial-gradient(circle,yellow, darkcyan, yellow);
+        background-image: linear-gradient(violet,yellow);
     }
 }
